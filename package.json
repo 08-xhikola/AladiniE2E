@@ -4,7 +4,7 @@
   "description": "Testing project on Cypress Framework",
   "main": "index.js",
   "scripts": {
-    "build": "rollup-c",
+    "build": "rollup -c",
     "test": "cypress run",
     "cypress:open": "cypress open"
   },
@@ -26,7 +26,10 @@
     "cypress-recurse": "^1.35.2",
     "cypress-wait-until": "^2.0.1",
     "mocha": "^10.2.0",
-    "neat-csv": "5.1.0"
+    "neat-csv": "5.1.0",
+    "rollup": "^4.2.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^18.0.6",
