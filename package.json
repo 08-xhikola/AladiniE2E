@@ -1,6 +1,7 @@
 {
   "name": "cypressrealproject",
   "version": "1.0.0",
+  "type": "module",
   "description": "Testing project on Cypress Framework",
   "main": "index.js",
   "scripts": {
