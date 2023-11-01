@@ -1,12 +1,14 @@
 /// <reference types="Cypress" />
 import LoginPage from "../../../../support/PageObjects/loginPage";
 import HomePage from "../../../../support/PageObjects/homePages";
+import ProductPage from "../../../../support/PageObjects/productPage";
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import '../../../../support/commands';
 import { recurse } from 'cypress-recurse'
 
 const loginPage = new LoginPage();
 const homePage = new HomePage();
+const productPage = new ProductPage();
 
 Given('I visit the Aladini website', () => {
     cy.visit(Cypress.env('url'));
@@ -67,6 +69,13 @@ Then('I should be logged in successfully and handle alert', () => {
     )
     .contains(value)   // filter down to one item
     .click()
+
+    })
+
+    When("I select the items properties", ()=> {
+      productPage.getGrayColor().click()
+
+      expect(productPage.getTransportPlace().should('be.visible').and('contain.text', 'Transporti Tiranë'))
 
     })
   

@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 7493000000
+              "duration": 7382000000
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1092000000
+              "duration": 1146000000
             }
           },
           {
@@ -45,7 +45,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 21141000000
+              "duration": 21149000000
             }
           },
           {
@@ -58,7 +58,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6376000000
+              "duration": 12037000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I select the items properties",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 390000000
             }
           }
         ],
