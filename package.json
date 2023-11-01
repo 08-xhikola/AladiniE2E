@@ -5,7 +5,7 @@
   "description": "Testing project on Cypress Framework",
   "main": "index.js",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c rollup.config.js",
     "test": "cypress run",
     "cypress:open": "cypress open"
   },
@@ -19,7 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "@cypress/browserify-preprocessor": "^3.0.2",
-    "cucumber-html-report-generator": "^1.0.33",
+    "cucumber-html-report-generator": "^1.0.32",
     "cypress": "^13.3.1",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-downloadfile": "^1.2.3",
