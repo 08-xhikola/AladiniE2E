@@ -15,7 +15,7 @@ report.generate({
     },
   },
   customData: {
-    title: "Cypress Automation - Aladini Shopping Page",
+    title: "Aladini Automation",
     data: [
       { label: "Project", value: "Aladini Cypress" },
       { label: "Release", value: "0.0.1" },
