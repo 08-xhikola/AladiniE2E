@@ -1,6 +1,6 @@
 name: Aladini E2E Cypress Tests
 
-on: [push]
+on: push
 
 jobs:
   cypress-run:
