@@ -28,8 +28,8 @@ class HomePage
         return cy.get(".df-card__title")
     }
 
-    getElementName(){
-        return cy.get("div[class='name_section hidden-xs'] h1[class='product_name_pd']")
+    getElementCategory(){
+        return cy.get("div[class='name_section hidden-xs'] div[class='container'] div[class='row'] div span[class='cat_nm']")
     }
    
 

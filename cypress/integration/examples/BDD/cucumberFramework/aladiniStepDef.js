@@ -93,7 +93,7 @@ Then('I should be logged in successfully and handle alert', () => {
     
     Then('I select the correct from the list', () => {
         homePage.getSearchResults().eq(0).click()
-        expect(homePage.getElementName().should('contain', 'Lenovo'))
+        expect(homePage.getElementCategory().should('contain', 'Laptop'))
       
       })
   
