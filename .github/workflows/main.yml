@@ -1,4 +1,4 @@
-name: Aladini E2E Cypress Tests
+name: Aladini Cypress Tests
 
 on: push
 
