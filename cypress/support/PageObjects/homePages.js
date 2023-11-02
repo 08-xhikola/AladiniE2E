@@ -16,14 +16,21 @@ class HomePage
         return cy.get("#onesignal-slidedown-dialog #onesignal-slidedown-cancel-button")
      }
 
-    // getLoginBtn(){
-    //     return cy.get()
-    // }
+    getSearchBar(){
+        return cy.get("body > div:nth-child(2) > div:nth-child(1) > header:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > form:nth-child(1) > input:nth-child(1)")
+     }
 
-    // getErrorModule(){
-    //     return cy.get()
-    // }
+    getNewSearch(){
+         return cy.get("#df-searchbox__dffullscreen")
+     }
 
+    getSearchResults(){
+        return cy.get(".df-card__title")
+    }
+
+    getElementName(){
+        return cy.get("div[class='name_section hidden-xs'] h1[class='product_name_pd']")
+    }
    
 
 }

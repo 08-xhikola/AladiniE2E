@@ -35,6 +35,7 @@
     "@badeball/cypress-cucumber-preprocessor": "^18.0.6",
     "@cucumber/html-formatter": "^20.4.0",
     "@cypress/browserify-preprocessor": "latest",
+    "jquery": "^3.7.1",
     "multiple-cucumber-html-reporter": "^3.5.0"
   }
 }

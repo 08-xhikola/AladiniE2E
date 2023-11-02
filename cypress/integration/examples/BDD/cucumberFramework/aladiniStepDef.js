@@ -78,4 +78,22 @@ Then('I should be logged in successfully and handle alert', () => {
       expect(productPage.getTransportPlace().should('be.visible').and('contain.text', 'Transporti Tiranë'))
 
     })
+
+    Given('I visit the Aladini website for shopping', () => {
+      cy.visit(Cypress.env('url'));
+    cy.wait(4000);
+  });
+
+    When('I search for a product', () => {
+      homePage.getSearchBar().click()
+      homePage.getNewSearch().type("laptop")
+      cy.wait(4000)
+      
+    });
+    
+    Then('I select the correct from the list', () => {
+        homePage.getSearchResults().eq(0).click()
+        expect(homePage.getElementName().should('contain', 'Lenovo'))
+      
+      })
   
