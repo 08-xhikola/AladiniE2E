@@ -1,12 +1,8 @@
 name: Aladini Cypress Tests
 
-<<<<<<< Updated upstream
 on:
   schedule:
     - cron: "0 * * * *"
-=======
-on: [push]
->>>>>>> Stashed changes
 
 jobs:
   cypress-run:
