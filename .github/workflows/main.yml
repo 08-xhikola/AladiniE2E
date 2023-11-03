@@ -1,0 +1,26 @@
+name: Aladini Cypress Tests
+
+<<<<<<< Updated upstream
+on:
+  schedule:
+    - cron: "0 * * * *"
+=======
+on: [push]
+>>>>>>> Stashed changes
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm run test
+          browser: chrome
+          spec: cypress/integration/examples/BDD/*.feature
