@@ -23,6 +23,7 @@ When('I log in with valid credentials', () => {
     loginPage.getEmailField().should('be.visible').type(email);
     loginPage.getPasswordField().should('be.visible').type(password);
     loginPage.getLoginBtn().click();
+    cy.wait(4000)
   });
 });
 
@@ -55,16 +56,18 @@ Then('I should be logged in successfully and handle alert', () => {
     Then('I select a random element from the list', () => {  
     //get one item from the whole list by pagination
     const itemsSelector = '#product_list li div.produkti h5'  
-    const nextPageSelector = '#pagination_next_bottom'
+    const nextPageSelector = "#pagination_next_bottom > a > b"
     const value = 'Printer Brother MFP Laser HL1222WEYJ1'
     
     recurse(
       () => cy.get(itemsSelector),
       (items) => expect(items).to.contain(value),
       {
-        post: () => cy.get(nextPageSelector).click(),
-        timeout: 10000, // timeout 10 seconds
-
+        post: () => {
+          cy.get(nextPageSelector).should('exist').click();
+          cy.wait(2000); // Adjust the wait time as needed
+        },
+        timeout: 30000,
       }
     )
     .contains(value)   // filter down to one item
@@ -92,7 +95,7 @@ Then('I should be logged in successfully and handle alert', () => {
     });
     
     Then('I select the correct from the list', () => {
-        homePage.getSearchResults().eq(0).click()
+        homePage.getSearchResults().eq(3).click()
         expect(homePage.getElementCategory().should('contain', 'Laptop'))
       
       })

@@ -1,8 +1,6 @@
 name: Aladini Cypress Tests
 
-on:
-  schedule:
-    - cron: "0 * * * *"
+on: push
 
 jobs:
   cypress-run:
